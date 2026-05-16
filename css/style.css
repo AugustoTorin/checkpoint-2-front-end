@@ -1,0 +1,92 @@
+:root{
+    --cor-principal: #000000;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #222222;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-bg: 40px;
+    --largura-max: 1200px;
+    --altura-section: 100dvh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Finlandica Headline", sans-serif;
+}
+
+.hero {
+    width: 100%;
+    min-height: var(--altura-section);
+    padding: var(--space-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-bg);
+}
+
+.conteudo {
+    width: 50%;
+
+    h2{
+        margin-block: var(--space-md);
+        color: var(--cor-principal);
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    h1{
+        margin-block: var(--space-md);
+        font-size: 60px;
+        line-height: 1.1;
+    }
+
+    p{
+        margin-block: var(--space-bg);
+        font-size: var(--space-md);  
+    }
+}
+
+.botao-principal {
+    display: inline-block;
+    padding: var(--space-md) var(--space-bg);
+    text-decoration: none;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    font-size: var(--space-md);
+    margin-right: var(--space-bg);
+}
+
+.botao-secundario {
+    display: inline-block;
+    padding: var(--space-md) var(--space-bg);
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    font-size: var(--space-md);
+}
+
+.imagem {
+    width: 50%;
+
+    img{
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+    }
+}
+
+.areas{
+    width: 100%;
+    min-height: var(--altura-section);
+}
+
+.sobre{
+    width: 100%;
+    min-height: var(--altura-section);
+}
