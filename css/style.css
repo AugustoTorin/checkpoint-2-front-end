@@ -1,22 +1,29 @@
-:root{
+:root {
     --cor-principal: #000000;
     --cor-fundo: #f5f5f5;
+    --cor-fundo-areas: #ffffff;
     --cor-texto: #222222;
+    --cor-texto-suave: #666666;
+    --cor-rodape-bg: #222222;
+    --cor-rodape-texto: #f5f5f5;
     --space-sm: 10px;
     --space-md: 20px;
     --space-bg: 40px;
     --largura-max: 1200px;
     --altura-section: 100dvh;
+    --altura-rodape: 100px;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Finlandica Headline", sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
 .hero {
@@ -31,24 +38,24 @@ body{
 
 .conteudo {
     width: 50%;
+}
 
-    h2{
-        margin-block: var(--space-md);
-        color: var(--cor-principal);
-        font-size: 25px;
-        font-weight: 400;
-    }
+.conteudo h2 {
+    margin-block: var(--space-md);
+    color: var(--cor-principal);
+    font-size: 25px;
+    font-weight: 400;
+}
 
-    h1{
-        margin-block: var(--space-md);
-        font-size: 60px;
-        line-height: 1.1;
-    }
+.conteudo h1 {
+    margin-block: var(--space-md);
+    font-size: 60px;
+    line-height: 1.1;
+}
 
-    p{
-        margin-block: var(--space-bg);
-        font-size: var(--space-md);  
-    }
+.conteudo p {
+    margin-block: var(--space-bg);
+    font-size: var(--space-md);
 }
 
 .botao-principal {
@@ -73,20 +80,165 @@ body{
 
 .imagem {
     width: 50%;
-
-    img{
-        width: 100%;
-        display: block;
-        border-radius: 12px;
-    }
 }
 
-.areas{
+.imagem img {
     width: 100%;
-    min-height: var(--altura-section);
+    display: block;
+    border-radius: 12px;
 }
 
-.sobre{
+.areas {
     width: 100%;
     min-height: var(--altura-section);
+    padding: var(--space-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-bg);
+    background-color: var(--cor-fundo-areas);
+}
+
+.areas-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    text-align: center;
+}
+
+.areas-label {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+}
+
+.areas-titulo {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    gap: var(--space-md);
+    width: 100%;
+    max-width: var(--largura-max);
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    background-color: var(--cor-fundo);
+    padding: var(--space-md);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cor-texto-suave);
+}
+
+.sobre {
+    width: 100%;
+    min-height: var(--altura-section);
+    padding: var(--space-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-bg);
+}
+
+.sobre-conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.sobre-label {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+}
+
+.sobre-titulo {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sobre-texto {
+    font-size: var(--space-md);
+    line-height: 1.6;
+    color: var(--cor-texto-suave);
+}
+
+.sobre-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    list-style: none;
+}
+
+.sobre-lista li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 16px;
+}
+
+.sobre-lista li::before {
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.sobre-imagem {
+    width: 50%;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    display: block;
+}
+
+.rodape {
+    width: 100%;
+    height: var(--altura-rodape);
+    background-color: var(--cor-rodape-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape p {
+    font-size: 16px;
+    color: var(--cor-rodape-texto);
+    text-align: center;
 }
